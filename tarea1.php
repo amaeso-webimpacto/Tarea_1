@@ -13,10 +13,10 @@
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
+ * @author    PrestaShop SA and Contributors contact@prestashop.com
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0  Academic Free License (AFL 3.0)
- */
+ **/
 
 if (!defined('_PS_VERSION_')) {
     exit;
@@ -50,25 +50,26 @@ class Tarea1 extends Module
     }
     public function install()
     {
-        if (!parent::install() ||
-        !$this->registerHook('displayHome') ||
+        if (!parent::install() or
+        !$this->registerHook('displayHome') or
         !$this->registerHook('displayFooter'))
-        return false; return true;
+        return false;
+        return true;
     }
     public function uninstall()
-     {
-        if (!parent::uninstall() ||
-        !$this->unregisterHook('displayHome') ||
+    {
+        if (!parent::uninstall() or
+        !$this->unregisterHook('displayHome') or
         !$this->unregisterHook('displayFooter'))
-        return false; return true;
-	 }
+        return false;
+        return true;
+    }
     public function hookDisplayHome()
-	{
+    {
         return $this->display(__FILE__, 'views/templates/hook/tarea1.tpl');
     }
     public function hookDisplayFooter()
-	{
+    {
         return $this->display(__FILE__, 'views/templates/hook/tarea1.tpl');
     }
-	
 }
