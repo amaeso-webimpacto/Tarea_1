@@ -52,21 +52,21 @@ class Tarea1 extends Module
     {
         if (!parent::install() ||
         !$this->registerHook('displayHome') ||
-        !$this->registerHook('displayFooterBefore'))
+        !$this->registerHook('displayFooter'))
         return false; return true;
     }
     public function uninstall()
      {
         if (!parent::uninstall() ||
         !$this->unregisterHook('displayHome') ||
-        !$this->unregisterHook('displayFooterBefore'))
+        !$this->unregisterHook('displayFooter'))
         return false; return true;
 	 }
     public function hookDisplayHome()
 	{
         return $this->display(__FILE__, 'views/templates/hook/tarea1.tpl');
     }
-    public function hookDisplayFooterBefore()
+    public function hookDisplayFooter()
 	{
         return $this->display(__FILE__, 'views/templates/hook/tarea1.tpl');
     }

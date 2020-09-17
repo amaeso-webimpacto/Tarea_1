@@ -13,12 +13,12 @@
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
+ * @author    PrestaShop SA and Contributors contact@prestashop.com
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0  Academic Free License (AFL 3.0)
- */
-<div id="tarea1">
-    <h1>{l s='Texto Fijo Traducible' mod='tarea1'}</h1>
+ **/
+ 
+<div>
+    <h1>{l s='Hola mundo' mod='tarea1'}</h1>
     <p>{$texto_variable|escape:'html':'UTF-8'}</p>
 </div>
-?>
